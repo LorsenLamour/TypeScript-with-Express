@@ -1,16 +1,16 @@
 # TypeScript-with-Express
 This is a template of a TypeScript project with Express. It can be use for new project.
 
-Step 1 : Initialize the project
+# Step 1 : Initialize the project
 mkdir mon-projet-express-typescript
 cd mon-projet-express-typescript
 npm init -y
 
-Step 2 :  Install Dependencies
+# Step 2 :  Install Dependencies
 npm install express
 npm install typescript ts-node-dev @types/node @types/express --save-dev
 
-Step 3 : Configure TypeScript (tsconfig.json)
+# Step 3 : Configure TypeScript (tsconfig.json)
 npx tsc --init
 Modify tsconfig.json to have the recent update
 {
@@ -26,11 +26,11 @@ Modify tsconfig.json to have the recent update
   "exclude": ["node_modules", "dist"]  
 }
 
-Step 4 : Create the structure of the project
+# Step 4 : Create the structure of the project
  mkdir src
 touch src/index.ts
 
-Step 5 : Testing your project
+# Step 5 : Testing your project
 import express, { Request, Response } from 'express';
 
 const app = express();
@@ -49,14 +49,14 @@ app.listen(port, () => {
   console.log(`Serveur en écoute sur <http://localhost>:${port}`);
 });
 
-Step 6 : Update your package.json to start your project automatically
+# Step 6 : Update your package.json to start your project automatically
 {
   "scripts": {
     "start": "ts-node-dev --respawn src/index.ts"
   }
 }
 
-Step 7 : Run your project 
+# Step 7 : Run your project 
 npm run start
 
 
